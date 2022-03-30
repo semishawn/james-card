@@ -1,0 +1,130 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	--input-padding: 20px;
+	--input-radius: 7px;
+	--input-shadow: 6px;
+	--hover-shadow: 3px;
+	--input-duration: 0.5s;
+	--primary1: white;
+	--primary2: #eee;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: #ccf;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+* {font-family: "Balsamiq Sans", sans-serif;}
+
+.birthday-container {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.people-container {
+	display: flex;
+	align-items: center;
+}
+
+img {width: 100px;}
+
+.img-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 20px;
+	font-weight: 700;
+	font-style: italic;
+	color: cornflowerblue;
+}
+.img-column + .img-column {margin-left: 30px;}
+
+img {
+	margin-top: 15px;
+	border-radius: 20px;
+	animation: rock 2s linear infinite;
+}
+
+.james img {width: 150px;}
+
+@keyframes rock {
+	0% {transform: rotate(0deg);}
+	33% {transform: rotate(-10deg);}
+	67% {transform: rotate(10deg);}
+	100% {transform: rotate(0deg);}
+}
+
+.birthday-message {
+	font-family: "Mogra";
+	font-size: 30px;
+	margin-top: 80px;
+	color: cornflowerblue;
+	text-shadow: 2px 2px black;
+}
+
+.btn-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sound-message {
+	font-size: 30px;
+	font-weight: 700;
+	font-style: italic;
+	color: cornflowerblue;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	padding: 10px 20px;
+	margin-top: 40px;
+	border: 0;
+	border-radius: var(--input-radius);
+	outline: 0;
+	box-shadow: 0 var(--input-shadow) 0 0 var(--primary2);
+	color: black;
+	background: var(--primary1);
+	text-decoration: none;
+	transition: all 0.15s;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.btn:hover {
+	box-shadow: 0 var(--hover-shadow) 0 0 var(--primary2);
+	transform: translateY(calc(var(--input-shadow) - var(--hover-shadow)));
+}
+.btn:active {
+	box-shadow: 0 0 0 0 var(--primary2);
+	transform: translateY(var(--input-shadow));
+}
+.btn svg {
+	font-size: 30px;
+	margin-right: 20px;
+}
+
+.music-btn {
+	--spacing: 25px;
+	position: absolute;
+	display: none;
+	bottom: var(--spacing);
+	left: var(--spacing);
+	font-size: 50px;
+	color: cornflowerblue;
+	cursor: pointer;
+}
